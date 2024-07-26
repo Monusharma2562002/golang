@@ -1,3 +1,4 @@
+# Stage 1: Build the Go app
 FROM golang:1.19 AS builder
 
 WORKDIR /app
@@ -23,4 +24,5 @@ WORKDIR /root/
 COPY --from=builder /app/hello .
 
 CMD ["./hello"]
+
 
