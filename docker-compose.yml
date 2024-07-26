@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: go-hello-world:latest
+    container_name: go-hello-world-container
+    command: ["./hello"]
